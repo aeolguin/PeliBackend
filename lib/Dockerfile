@@ -6,7 +6,7 @@ MAINTAINER Ariel Olguin
 
 #ENTORNO
 ENV MYSQL_DATABASE=competencias \
-    MYSQL_ROOT_PASSWORD=Arielo
+    MYSQL_ROOT_PASSWORD=Martina2712
 
 ADD script.sql /docker_entrypoint_initdb.d 
 
