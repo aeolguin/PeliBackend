@@ -24,4 +24,4 @@ RUN npm install
 COPY [".", "/src"]
 
 #Ejecutar dentro del servidor
-CMD ["node", "/src/index.js"]
+CMD ["node", "/src/servidor.js"]
