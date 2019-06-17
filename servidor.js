@@ -14,13 +14,13 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-// app.use((req, res, next) =>{
-//    res.header('Acces-Control-Allow-Origin', '*');
-//    res.header('Acces-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Acces-Control-Allow-Request-Method');
-//    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-//    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-//    next();
-// });
+app.use((req, res, next) =>{
+   res.header('Acces-Control-Allow-Origin', '*');
+   res.header('Acces-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Acces-Control-Allow-Request-Method');
+   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+   res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+   next();
+});
 
 //Pedido de parte del modulo Cliente - me faltan las validaciones de errores!
 app.use(bodyParser.json());
