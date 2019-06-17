@@ -17,6 +17,9 @@ ADD package.json /src/package.json
 #Directorio de trabajo
 WORKDIR /src
 
+#Expone el puerto 8080
+EXPOSE 8080
+
 #Instala dependecias
 RUN npm install
 
