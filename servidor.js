@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 
 //Permite los llamados desde otros dominios mediante CORS
 app.use((req, res, next) =>{
-   res.header('Acces-Control-Allow-Origin', 'http://ip172-18-0-17-bk44e4fdqii000d93qog-32768.direct.labs.play-with-docker.com/');
+   res.header('Acces-Control-Allow-Origin', '*');
    res.header('Acces-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Acces-Control-Allow-Request-Method');
    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
