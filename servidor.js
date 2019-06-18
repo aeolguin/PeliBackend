@@ -14,15 +14,16 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+//Permite los llamados desde otros dominios mediante CORS
 app.use((req, res, next) =>{
-   res.header('Acces-Control-Allow-Origin', '*');
+   res.header('Acces-Control-Allow-Origin', 'http://ip172-18-0-17-bk44e4fdqii000d93qog-32768.direct.labs.play-with-docker.com/');
    res.header('Acces-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Acces-Control-Allow-Request-Method');
    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
    next();
 });
 
-//Pedido de parte del modulo Cliente - me faltan las validaciones de errores!
+//Pedido de parte del modulo Cliente 
 app.use(bodyParser.json());
 app.get('/competencias', controladorCliente.listaCompetencias);
 app.get('/competencias/:id/peliculas' , controladorCliente.obtenerCompetencias);
